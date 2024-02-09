@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KANCHARLA GAYATHRI - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -22,6 +23,21 @@
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
             transition: background 0.5s ease;
         }
+        .navbar {
+        opacity: 0;
+        animation: fadeInNavbar 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeInNavbar {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
         .navbar-dark .navbar-brand,
         .navbar-dark .navbar-nav .nav-link {
@@ -65,7 +81,21 @@
                 transform: translateY(0);
             }
         }
+        #about {
+        opacity: 0;
+        animation: fadeInAbout 1s ease-in-out forwards;
+    }
 
+    @keyframes fadeInAbout {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
         .card {
             transition: transform 0.5s ease-in-out;
             width: 300px;
@@ -167,7 +197,7 @@
             background-color: #165670;
             border-color: #165670;
         }
-
+        
         footer {
             background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
@@ -182,23 +212,23 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">KANCHARLA GAYATHRI</a>
+        <a class="navbar-brand" href="#">MY Portfolio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#home"><i class="fa-solid fa-house"></i>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#about"><i class="fa-solid fa-id-badge"></i>About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#projects"><i class="fa-regular fa-folder-open"></i>Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#contact"><i class="fa-solid fa-person"></i>Contact</a>
                 </li>
             </ul>
         </div>
@@ -206,8 +236,9 @@
 
     <section id="home" class="jumbotron text-center">
         <div class="heading">
-            <h1 class="display-4">My Portfolio</h1>
+            <h1 class="display-4">KVS GAYATHRI</h1>
             <p class="lead">I'm a Web Developer.</p>
+            <button id="resumeButton" class="btn btn-primary">View Resume</button>
         </div>
     </section>
 
@@ -297,17 +328,48 @@
     <section id="contact" class="container mt-4">
         <h2>Contact Me</h2>
         <div class="contact-links">
-            <p><strong>Name:</strong> KVS GAYATHRI</p>
-            <p><strong>Email:</strong> kvs.gayathri25@gmail.com</p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kvsgayathri" target="_blank">LinkedIn Profile</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/Gayathri-Kancharla" target="_blank">GitHub Profile</a></p>
+     
+            <p><strong><i class="fa-solid fa-envelope"></i></strong><a href="kvs.gayathri25@gmail.com">    kvs.gayathri25@gmail.com</p>
+            <p><strong><i class="fa-brands fa-linkedin"></i></strong><a href="https://www.linkedin.com/in/kvsgayathri" target="_blank">   https://www.linkedin.com/in/kvsgayathri</a></p>
+            <p><strong><i class="fa-brands fa-github"></i></strong><a href="https://github.com/Gayathri-Kancharla" target="_blank">       https://github.com/Gayathri-Kancharla</a></p>
         </div>
     </section>
     
     <footer class="text-center mt-4">
         <p>&copy; 2024 KANCHARLA GAYATHRI. All rights reserved.</p>
     </footer>
-
+    <script>
+        function openResume() {
+            var iframe = document.createElement('iframe');
+            iframe.src = 'c:\\Users\\suren\\Downloads\\KVS GAYATHRI Resume.pdf';
+            iframe.style.width = '100%';
+            iframe.style.height = '600px';
+            iframe.style.border = 'none';
+    
+            var modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            modal.style.display = 'flex';
+            modal.style.alignItems = 'center';
+            modal.style.justifyContent = 'center';
+    
+            modal.appendChild(iframe);
+    
+            document.body.appendChild(modal);
+    
+            modal.addEventListener('click', function () {
+                document.body.removeChild(modal);
+            });
+        }
+    
+        document.getElementById('resumeButton').addEventListener('click', openResume);
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
