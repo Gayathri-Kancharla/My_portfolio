@@ -197,16 +197,24 @@
             background-color: #165670;
             border-color: #165670;
         }
-        
-        footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            margin-top: -60px; 
+        iframe {
+    max-width: 100%;
+    max-height: 100%;
+         }
+
+      div.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+       }
+      footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative; 
+    width: 100%;
         }
     </style>
 </head>
@@ -329,7 +337,7 @@
         <h2>Contact Me</h2>
         <div class="contact-links">
      
-            <p><strong><i class="fa-solid fa-envelope"></i></strong><a href="kvs.gayathri25@gmail.com">    kvs.gayathri25@gmail.com</p>
+            <p><strong><i class="fa-solid fa-envelope"></i></strong><a href="mailto:kvs.gayathri25@gmail.com">kvs.gayathri25@gmail.com</a></p>
             <p><strong><i class="fa-brands fa-linkedin"></i></strong><a href="https://www.linkedin.com/in/kvsgayathri" target="_blank">   https://www.linkedin.com/in/kvsgayathri</a></p>
             <p><strong><i class="fa-brands fa-github"></i></strong><a href="https://github.com/Gayathri-Kancharla" target="_blank">       https://github.com/Gayathri-Kancharla</a></p>
         </div>
@@ -361,9 +369,10 @@
     
             document.body.appendChild(modal);
     
-            modal.addEventListener('click', function () {
+           modal.addEventListener('click', function (e) {
+             e.preventDefault();
                 document.body.removeChild(modal);
-            });
+                 });
         }
     
         document.getElementById('resumeButton').addEventListener('click', openResume);
