@@ -300,13 +300,13 @@
         <h3>S K I L L S</h3>
         <div class="row">
             <div class="col">
-                <img src="c:\Users\suren\Downloads\htmlimage.jpg" alt="HTML">
+                <b>H T M L </b>
             </div>
             <div class="col">
-                <img src="c:\Users\suren\Downloads\cssimage.jpg" alt="CSS">
+              <b>C S S </b>
             </div>
             <div class="col">
-                <img src="c:\Users\suren\Downloads\bootstrap.jpg" alt="Bootstrap">
+              <b>B O O T S T R A P</b>
             </div>
         </div>
     </div>
@@ -314,13 +314,13 @@
     <div class="skills2">
         <div class="row">
             <div class="col">
-                <img src="c:\Users\suren\Downloads\php.jpg" alt="PHP">
+              <b>P H P </b>
             </div>
             <div class="col">
-                <img src="c:\Users\suren\Downloads\mysql.jpg" alt="MySQL">
+                <b>MY S Q L</b>
             </div>
             <div class="col">
-                <img src="c:\Users\suren\Downloads\javascript.jpg" alt="JavaScript">
+                <b>J A V A S C R I P T</b>
             </div>
         </div>
     </div>
